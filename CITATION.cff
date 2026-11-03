@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use or discuss SpeLL, please cite the paper below. Implementation code is coming soon."
+title: "SpeLL: A Generative Framework for Synthesizing 3D Visual Effects from Text Prompts with Large Language Models"
+authors:
+  - family-names: Oh
+    given-names: Jeongseok
+    orcid: "https://orcid.org/0009-0009-1725-2814"
+  - family-names: Kim
+    given-names: SeungJun
+    orcid: "https://orcid.org/0000-0003-0470-2483"
+url: "https://stan5dard.github.io/SpeLL-project/"
+repository-code: "https://github.com/stan5dard/SpeLL-project"
+preferred-citation:
+  type: conference-paper
+  title: "SpeLL: A Generative Framework for Synthesizing 3D Visual Effects from Text Prompts with Large Language Models"
+  authors:
+    - family-names: Oh
+      given-names: Jeongseok
+    - family-names: Kim
+      given-names: SeungJun
+  year: 2026
+  conference:
+    name: "The 39th Annual ACM Symposium on User Interface Software and Technology (UIST 2026)"
+  publisher:
+    name: "Association for Computing Machinery"
+  doi: "10.1145/3830398.3830697"
+  url: "https://doi.org/10.1145/3830398.3830697"

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpeLL — Editable 3D VFX from Text Prompts · UIST 2026</title>
+  <meta name="description" content="SpeLL creates editable 3D visual effects drafts from text prompts using large language models and retrieval-based asset assembly. UIST 2026. Paper, results, and forthcoming code.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="SpeLL — Editable 3D VFX from Text Prompts">
+  <meta property="og:description" content="A UIST 2026 research project by Jeongseok Oh and SeungJun Kim. Explore the paper and generated VFX. Code coming soon.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stan5dard.github.io/SpeLL-project/">
+  <meta property="og:image" content="https://stan5dard.github.io/SpeLL-project/assets/teaser.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="citation_title" content="SpeLL: A Generative Framework for Synthesizing 3D Visual Effects from Text Prompts with Large Language Models">
+  <meta name="citation_author" content="Jeongseok Oh">
+  <meta name="citation_author" content="SeungJun Kim">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="The 39th Annual ACM Symposium on User Interface Software and Technology">
+  <meta name="citation_doi" content="10.1145/3830398.3830697">
+  <meta name="citation_pdf_url" content="https://stan5dard.github.io/SpeLL-project/paper/SpeLL.pdf">
+  <link rel="canonical" href="https://stan5dard.github.io/SpeLL-project/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Main navigation">
+    <a class="wordmark" href="#top" aria-label="SpeLL home">SpeLL<span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <div class="nav-links"><a href="#results">Results</a><a href="#method">Method</a><a href="#video">Video</a><a href="#code">Code</a></div>
+  </nav>
+</header>
+<main id="main">
+  <section class="hero wrap" id="top" aria-labelledby="title">
+    <p class="venue">UIST 2026</p>
+    <h1 id="title"><span class="title-name">SpeLL</span><span class="title-full">A Generative Framework for Synthesizing 3D Visual Effects from Text Prompts with Large Language Models</span></h1>
+    <p class="authors"><a href="https://orcid.org/0009-0009-1725-2814">Jeongseok Oh</a><a href="https://orcid.org/0000-0003-0470-2483">SeungJun Kim</a></p>
+    <p class="affiliation">HCIS Lab, GIST</p>
+    <div class="hero-actions">
+      <a class="button primary" href="paper/SpeLL.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg>Paper <span class="button-note">PDF</span></a>
+      <a class="button" href="https://github.com/stan5dard/SpeLL-project"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-3-15-2 18"/></svg>Code <span class="status">Coming soon</span></a>
+      <a class="button" href="#video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 12 8-12 8z"/></svg>Video</a>
+    </div>
+    <p class="hero-summary">From a text prompt to an editable 3D VFX draft in Unity.</p>
+  </section>
+
+  <section class="results wrap" id="results" aria-labelledby="results-title">
+    <div class="section-intro compact"><div><h2 id="results-title">Generated results</h2><p>Meshes, textures, and particles composed into a single effect.</p></div><button class="text-button" id="motion-toggle" type="button" aria-pressed="false">Play examples</button></div>
+    <div class="result-grid">
+      <figure><video class="example" muted loop playsinline preload="auto" poster="assets/purple-beam.jpg" aria-label="A purple horizontal beam, rotating on a tiled 3D floor"><source src="assets/purple-beam.mp4" type="video/mp4"></video><figcaption>“A purple horizontal beam”</figcaption></figure>
+      <figure><video class="example" muted loop playsinline preload="auto" poster="assets/blue-shield.jpg" aria-label="Blue transparent spherical shield"><source src="assets/blue-shield.mp4" type="video/mp4"></video><figcaption>“Blue transparent spherical shield”</figcaption></figure>
+      <figure><video class="example" muted loop playsinline preload="auto" poster="assets/fire-tornado.jpg" aria-label="A fire tornado effect"><source src="assets/fire-tornado.mp4" type="video/mp4"></video><figcaption>“A fire tornado effect”</figcaption></figure>
+      <figure><video class="example" muted loop playsinline preload="auto" poster="assets/raindrops.jpg" aria-label="Falling raindrops above a tiled 3D floor"><source src="assets/raindrops.mp4" type="video/mp4"></video><figcaption>“Falling raindrop effect”</figcaption></figure>
+      <figure><video class="example" muted loop playsinline preload="auto" poster="assets/green-aura.jpg" aria-label="A green magic aura effect"><source src="assets/green-aura.mp4" type="video/mp4"></video><figcaption>“Green magic aura effect”</figcaption></figure>
+      <figure><video class="example" muted loop playsinline preload="auto" poster="assets/golden-portal.jpg" aria-label="A round golden portal effect"><source src="assets/golden-portal.mp4" type="video/mp4"></video><figcaption>“Round golden portal effect”</figcaption></figure>
+      <figure><video class="example" muted loop playsinline preload="auto" poster="assets/explosion.jpg" aria-label="A red explosion followed by smoke"><source src="assets/explosion.mp4" type="video/mp4"></video><figcaption>“Red explosion and smoke”</figcaption></figure>
+      <figure><video class="example" muted loop playsinline preload="auto" poster="assets/blue-slash.jpg" aria-label="A blue sword slash effect"><source src="assets/blue-slash.mp4" type="video/mp4"></video><figcaption>“A blue sword slash effect”</figcaption></figure>
+    </div>
+    <p class="caption">Examples from the paper’s supplementary video. Each effect is rendered in Unity; the camera views are synchronized for this gallery.</p>
+    <noscript><p>Enable JavaScript to play the gallery, or watch the video below using its playback controls.</p></noscript>
+  </section>
+
+  <section class="section prose" id="abstract" aria-labelledby="abstract-title">
+    <h2 id="abstract-title">Abstract</h2>
+    <p>Creating visual effects for 3D content requires specialized design knowledge and technical expertise. <strong>SpeLL produces editable 3D VFX drafts from text prompts</strong> using large language models and retrieval-based asset assembly. It combines prompt enhancement, spatial design for component retrieval and layout arrangement, and temporal design for activation sequencing.</p>
+    <p>Informed by a formative study with professional VFX designers, SpeLL generates parameterized meshes, textures, and particle systems that can be refined in Unity. A user study with twenty professional designers evaluated the framework against ablated systems, 3D generation baselines, and manual workflows. Results showed higher intention alignment, spatial-temporal layout quality, and editability. The goal is to support early exploration and drafting while leaving final expressive control to designers.</p>
+  </section>
+
+  <section class="section wrap" id="method" aria-labelledby="method-title">
+    <div class="section-intro"><div><p class="eyebrow">Framework</p><h2 id="method-title">From a prompt to a coordinated effect</h2><p>Component selection, spatial arrangement, and temporal sequencing work together.</p></div></div>
+    <figure class="method-figure"><a href="assets/framework.jpg" target="_blank" rel="noopener" aria-label="Open the original framework figure at full resolution"><img src="assets/framework.jpg" alt="The SpeLL pipeline: prompt enhancement provides descriptions and layout guidance; LLMs propose spatial and temporal layouts; retrieval and refinement inform component matching; meshes, textures and particles are integrated into the generated VFX." loading="lazy" width="4134" height="1309"></a><figcaption>Original framework figure from the paper. <a href="assets/framework.jpg" target="_blank" rel="noopener">View full-size figure ↗</a></figcaption></figure>
+    <div class="method-notes">
+      <div><h3>Prompt enhancement</h3><p>Expand a high-level request into component descriptions and spatial-temporal guidance.</p></div>
+      <div><h3>Spatial and temporal design</h3><p>Retrieve suitable components, arrange their positions and sizes, and refine their activation sequence.</p></div>
+      <div><h3>Editable Unity output</h3><p>Assemble a parameterized VFX draft that supports further adjustment by the designer.</p></div>
+    </div>
+    <div class="composition">
+      <img src="assets/composition.jpg" alt="Three simple meshes paired with noise textures form sub-components; these are combined with particles into one complete VFX asset." loading="lazy" width="2741" height="1595">
+      <div><h3>Built from VFX components</h3><dl><dt>Mesh</dt><dd>Provides the basic shape and spatial structure.</dd><dt>Texture</dt><dd>Tileable noise patterns and shaders create visual detail and flow.</dd><dt>Particle</dt><dd>Adds the emission and motion of small finishing details.</dd></dl></div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="video" aria-labelledby="video-title">
+    <div class="section-intro"><div><p class="eyebrow">Demonstration</p><h2 id="video-title">See SpeLL in use</h2><p>The supplementary video shows generation, results, and parameter-based editing.</p></div></div>
+    <video class="overview-video" controls playsinline preload="none" poster="assets/overview-poster.jpg" aria-label="SpeLL supplementary video"><source src="assets/overview.mp4" type="video/mp4">Your browser does not support embedded video. <a href="assets/overview.mp4">Download the supplementary video.</a></video>
+    <p class="caption"><a href="assets/overview.mp4" download>Download video</a> · A web-sized copy of the original supplementary video.</p>
+  </section>
+
+  <section class="section wrap release" id="code" aria-labelledby="code-title">
+    <div><p class="eyebrow">Code release</p><h2 id="code-title">Code coming soon.</h2><p>We are preparing the implementation and documentation for public release. The repository currently contains the project page and a placeholder structure for the Unity client, backend, and data preparation tools.</p><a class="button primary" href="https://github.com/stan5dard/SpeLL-project">View repository <span aria-hidden="true">↗</span></a></div>
+    <aside class="paper-link"><p class="eyebrow">Read the paper</p><p>SpeLL: A Generative Framework for Synthesizing 3D Visual Effects from Text Prompts with Large Language Models</p><a href="paper/SpeLL.pdf">Author PDF ↗</a><a href="https://doi.org/10.1145/3830398.3830697">ACM / DOI ↗</a></aside>
+  </section>
+
+  <section class="section prose citation" id="citation" aria-labelledby="citation-title">
+    <div class="citation-heading"><h2 id="citation-title">Citation</h2><button type="button" id="copy-citation" class="text-button">Copy BibTeX</button></div>
+    <pre><code id="bibtex">@inproceedings{oh2026spell,
+  author    = {Oh, Jeongseok and Kim, SeungJun},
+  title     = {SpeLL: A Generative Framework for Synthesizing 3D Visual Effects
+               from Text Prompts with Large Language Models},
+  booktitle = {Proceedings of the 39th Annual ACM Symposium on
+               User Interface Software and Technology},
+  series    = {UIST '26},
+  year      = {2026},
+  publisher = {Association for Computing Machinery},
+  doi       = {10.1145/3830398.3830697},
+  url       = {https://doi.org/10.1145/3830398.3830697}
+}</code></pre>
+    <p class="sr-only" id="copy-status" aria-live="polite"></p>
+  </section>
+</main>
+<footer class="wrap footer"><p>Jeongseok Oh &amp; SeungJun Kim · HCIS Lab, GIST</p><div><a href="https://github.com/stan5dard/SpeLL-project">GitHub</a><a href="paper/SpeLL.pdf">Paper</a><a href="assets/project-qr.svg" download>Project QR</a><a href="#top">Back to top ↑</a></div></footer>
+</body>
+</html>

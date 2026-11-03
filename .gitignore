@@ -1,0 +1,44 @@
+# Local credentials
+.env
+.env.*
+!.env.example
+**/APIKeys.json
+**/api_keys.json
+**/secrets.json
+*.pem
+*.key
+
+# Unity-generated files
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/MemoryCaptures/
+**/Recordings/
+*.csproj
+*.sln
+*.pidb
+*.user
+*.pdb
+*.mdb
+mono_crash.*
+
+# Python / tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+node_modules/
+.DS_Store
+*.log
+
+# Local experiments and private data
+**/UserResults/
+**/participant_data/
+**/raw_data/
+**/cache/
+**/cache_*/
